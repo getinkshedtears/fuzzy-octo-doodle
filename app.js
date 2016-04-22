@@ -5,9 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var session = require('express-session');
+  mongoose.connect('mongodb://admin:Admin@ds011321.mlab.com:11321/getinkshedtearsnightlife');
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
+var session = require('express-session');
 
 var routes = require('./routes/index')(passport);
 
@@ -25,15 +26,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', routes);
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
 
 app.use(require('express-session')({
   secret: 'theynevershutup',
@@ -107,6 +99,8 @@ passport.use(new FacebookStrategy({
         });
 
     }));
+
+app.use('/', routes);
 
 // error handlers
 

@@ -1,7 +1,233 @@
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
-  padding: 50px;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  background-image: url("/images/ts.JPG");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
 }
 a {
   color: #00b7ff;
+}
+.wrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 50%;
+  top: 50%;
+  background: rgba(255,255,255,0.5);
+  overflow: show;
+  color: #000;
+}
+.search {
+  margin-top: 2%;
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+}
+.search input {
+  width: 30%;
+  padding: 10px;
+}
+.search input[type = submit] {
+  width: auto;
+  margin: 20px;
+}
+.text-title {
+  cursor: default;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-shadow: 0 0 10px #f00;
+/* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 10px #f00;
+  -webkit-text-shadow: 0 0 10px #f00;
+}
+.text-youarehere {
+  cursor: default;
+  font-size: 1.5em;
+}
+.login-box-open {
+  right: 20px;
+  position: absolute;
+  top: 40px;
+  width: 20%;
+  height: 50%;
+  background: #fff;
+  transition: 0.4s ease all;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  z-index: 9;
+  overflow: hidden;
+}
+.login-box-closed {
+  right: 20px;
+  position: absolute;
+  top: -50%;
+  height: calc(50% - 4px);
+  width: 20%;
+  background: #fff;
+  transition: 0.4s ease all;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+.login-wrapper {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  background: #000;
+  z-index: 10;
+}
+.facebook {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10%;
+  position: relative;
+  font-size: 0.25em;
+  color: #000;
+}
+.close {
+  position: relative;
+  padding: 20px;
+  font-size: 0.25em;
+  color: #000;
+  bottom: 0;
+  right: 0;
+}
+.topbar {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  position: absolute;
+  font-size: 5em;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+}
+.location {
+  width: calc(25% - 68px);
+  margin: 30px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #000;
+}
+.location-name {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 2%;
+  border-bottom: 2px solid #000;
+}
+.location-review {
+  width: 80%;
+  margin-left: 10%;
+  max-height: 100%;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.attending {
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 50%;
+}
+.attending .number {
+  font-size: 3em;
+}
+.add-attending {
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+.add-attending:hover {
+  font-size: 1.75em;
+}
+.display {
+  text-align: center;
+}
+.loader {
+  margin-top: 20px;
+  display: inline-block;
+  border: 16px solid #fff;
+  border-top: 16px solid #000;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+.login {
+  float: right;
+  margin-right: 20px;
+  font-size: 0.25em;
+  transform: translateY(50%);
+}
+.top {
+  height: 75px;
+}
+.middle {
+  height: 100px;
+}
+.bottom {
+  height: 150px;
+}
+@-moz-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
